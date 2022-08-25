@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+// ignore: depend_on_referenced_packages
 import 'package:video_player/video_player.dart';
 
 // ignore: depend_on_referenced_packages
@@ -63,13 +65,13 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: Column(
         children: [
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height / 2.2,
             width: MediaQuery.of(context).size.width,
             child: Stack(children: [
-              Container(
-                  width: _controller.value.size?.width ?? 0,
-                  height: _controller.value.size?.height ?? 0,
+              SizedBox(
+                  width: _controller.value.size.width,
+                  height: _controller.value.size.height,
                   child: VideoPlayer(_controller)),
               Container(
                 decoration: BoxDecoration(
@@ -104,9 +106,7 @@ class _HomeState extends State<Home> {
                         padding: const EdgeInsets.only(top: 20),
                         child: Text(
                           temp != null
-                              ? ((temp - 32) * 5 / 9).floor().toString() +
-                                  "\u00B0" +
-                                  " C"
+                              ? "${((temp - 32) * 5 / 9).floor()}\u00B0 C"
                               : "Loading",
                           style: const TextStyle(
                               fontSize: 40,
@@ -140,9 +140,7 @@ class _HomeState extends State<Home> {
                     leading: const FaIcon(FontAwesomeIcons.thermometerHalf),
                     title: const Text("Temprature"),
                     trailing: Text(temp != null
-                        ? ((temp - 32) * 5 / 9).floor().toString() +
-                            "\u00B0" +
-                            " C"
+                        ? "${((temp - 32) * 5 / 9).floor()}\u00B0 C"
                         : "Loading"),
                   ),
                   ListTile(
@@ -157,17 +155,15 @@ class _HomeState extends State<Home> {
                     // ignore: deprecated_member_use
                     leading: const FaIcon(FontAwesomeIcons.sun),
                     title: const Text("Humidity"),
-                    trailing: Text(humidity != null
-                        ? humidity.toString() + " %"
-                        : "Loading"),
+                    trailing:
+                        Text(humidity != null ? "$humidity %" : "Loading"),
                   ),
                   ListTile(
                     // ignore: deprecated_member_use
                     leading: const FaIcon(FontAwesomeIcons.wind),
                     title: const Text("Wind Speed"),
-                    trailing: Text(windspeed != null
-                        ? windspeed.toString() + " km/h"
-                        : "Loading"),
+                    trailing:
+                        Text(windspeed != null ? "$windspeed km/h" : "Loading"),
                   ),
                 ],
               ),

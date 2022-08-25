@@ -5,36 +5,36 @@
   },
   "weather": [
     {
-      "id": 300,
-      "main": "Drizzle",
-      "description": "light intensity drizzle",
-      "icon": "09n"
+      "id": 701,
+      "main": "Mist",
+      "description": "mist",
+      "icon": "50n"
     }
   ],
   "base": "stations",
   "main": {
-    "temp": 298.17,
-    "feels_like": 299.34,
-    "temp_min": 298.17,
-    "temp_max": 298.17,
-    "pressure": 1001,
-    "humidity": 100
+    "temp": 86.04,
+    "feels_like": 98.64,
+    "temp_min": 86.04,
+    "temp_max": 86.04,
+    "pressure": 1005,
+    "humidity": 89
   },
-  "visibility": 3000,
+  "visibility": 3500,
   "wind": {
-    "speed": 4.63,
-    "deg": 210
+    "speed": 5.75,
+    "deg": 180
   },
   "clouds": {
-    "all": 100
+    "all": 75
   },
-  "dt": 1661284601,
+  "dt": 1661447262,
   "sys": {
     "type": 1,
     "id": 9049,
     "country": "IN",
-    "sunrise": 1661302164,
-    "sunset": 1661348122
+    "sunrise": 1661388585,
+    "sunset": 1661434470
   },
   "timezone": 19800,
   "id": 1279233,
